@@ -1,9 +1,9 @@
 import requests
 import re
 
-def link(shortened_link: str) -> str:
+def link(mobile_link: str) -> str:
     try:
-        response = requests.head(shortened_link, allow_redirects=True)
+        response = requests.head(mobile_link, allow_redirects=True)
         
         full_link = response.url
         return full_link
